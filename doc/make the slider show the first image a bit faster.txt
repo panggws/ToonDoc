@@ -1,4 +1,0 @@
-/* fater load slider image*/
-
-.wooslider .slides > li:first-child {display: block; -webkit-backface-visibility: visible;}
-.wooslider .slides > li {display: none; -webkit-backface-visibility: hidden;}

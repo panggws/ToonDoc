@@ -1,6 +1,0 @@
-$('iframe').each(function(){$(this).attr('src', function (i, val ) {return val;});})
-
-
-jQuery('a.accordion-toggle').on('click', function(){
-    $('iframe').attr('src', function (i, val ) {return val;});
-});

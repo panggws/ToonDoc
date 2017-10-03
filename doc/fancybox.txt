@@ -1,6 +1,0 @@
-<a href="#data" class="fancybox" id="fancybox-auto"></a>
-<div class="fancybox-hidden" style="display: none;">
-<div id="data" style="width: 457px; height: 377px;">
-/*--- content ---*/
-</div>
-</div>
