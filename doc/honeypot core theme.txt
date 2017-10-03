@@ -1,0 +1,10 @@
+<script>
+jQuery(document).ready(function(){
+jQuery("li:contains('I am a robot')").css("display","none");
+jQuery("li:contains('I am a robot') > input").addClass("robocheck");
+    jQuery(".robocheck").change(function () {
+        if (jQuery(this).is(':checked')) {
+            jQuery(".sendbutton").attr('disabled','disabled');
+        }
+    });});
+</script>

@@ -1,0 +1,211 @@
+<!--put this code on page you want to show the popup-->
+
+
+<div class="modal fade" id="popup-google" tabindex="-1" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" type="button" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+<h2 class="font-30">Computer-eyez (south) Ltd</h2>
+<p>Quarry Rd, Newhaven, United Kingdom</p>
+<h1 class="accent4">4.9<span><span class="_pxg _Kxg" aria-label="Rated4.9out of5"><span style="width:125px"></span></span></span></h1>
+</div>
+<div class="modal-body">
+<div id="google-reviews"></div>
+</div>
+<div class="modal-footer">
+<div id="testimonial-modal">
+[testimonials_carousel group="testimonials" layout="list"]
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript"> jQuery(document).ready(function(){jQuery('#popup-google').modal();});</script>
+
+<!--put this code on code snippets [code 1 : google review script]-->
+<script>
+    $(document).ready(function() {
+
+      $("#google-reviews").googlePlaces({
+          placeId: 'ChIJP7ZKS1J830cRbq8PfDKr46M'   //https://developers.google.com/places/place-id#find-id  enter your company name in this site it will show the ID
+        , render: ['reviews']
+        , min_rating: 2
+        , max_rows:20
+      });
+
+    });
+</script>
+
+<!--put this code on code snippets [code 2 : google review library]-->
+<script src="/wp-content/uploads/sites/223/scripts/google-places.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places&key=AIzaSyCiKTHQB-9F3qqpQ7Uj5wZx883fa4BT1JU"></script> 
+
+<!--the  &key=AIzaSyCiKTHQB-9F3qqpQ7Uj5wZx883fa4BT1JU  get from https://developers.google.com/maps/documentation/javascript/get-api-key   then click [get a key] then choose [my projects] and click continue then [Where will you be calling the API from?] choose [web browser Javascript] then click [What credential do I need?] you will get the key-->
+<style>
+
+#popup-google .modal-header p{
+    font-size: 14px;
+    line-height: 4px;
+}
+#popup-google .modal-header {
+	padding-left: 40px;
+}
+#google-reviews {
+	height: 660px;
+	overflow: scroll;
+}
+#popup-google .modal-dialog {
+	width: 900px !important;
+}
+#popup-google .carousel-inner {
+	min-height: 220px;
+}
+#popup-google .carousel-indicators {
+	bottom: -55px;
+}
+#popup-google .modal-content {
+    border-radius: 0px;
+    max-height: 850px;
+    overflow: scroll;
+}
+#popup-google .modal-footer {
+	text-align: justify;
+}
+.review-item {
+	background: rgba(255, 255, 255,1) none repeat scroll 0 0;
+	float: left;
+	margin: 1%;
+	min-height: auto;
+	padding: 20px;
+	width: 100%;
+	clear: both;
+}
+.review-stars::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.review-stars ul li i {
+	color: #E7711B !important;
+}
+.review-meta {
+	color: #000;
+	font-weight: 700;
+}
+
+.review-stars > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.review-stars li {
+    float: left;
+    list-style: outside none none;
+}
+
+.star::before {
+    content: "";
+    font-family: fontawesome;
+    font-style: normal;
+    padding-right: 4px;
+}
+
+._Kxg span {
+	background-image: url(http://computer-eyez.bypronto.com/wp-content/uploads/sites/1527/2016/01/index.png);
+}
+._pxg {
+	background-repeat: repeat-x;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	top: 1px;
+}
+._pxg span {
+	background-repeat: repeat-x;
+	display: block;
+}
+._Kxg, ._Kxg span {
+	background-size: 25px 22px;
+	height: 22px;
+	width: 165px;
+    margin-left: 4px;
+}
+.review-text {
+    margin-top: 20px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media  (max-width: 991px) {
+.testimonial img {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+#popup-google .modal-dialog {
+	width: auto !important;
+}
+}
+
+@media (max-width: 767px) {
+.review-item {
+    min-height: auto;
+    width: 100%;
+}
+.modal-header .font-30 {
+    font-size: 18px;
+}
+#popup-google .modal-dialog {
+	width: auto !important;
+}
+#popup-google .carousel-inner {
+	min-height: 660px;
+}
+#popup-google.carousel-indicators {
+	width: 100% !important;
+	margin-left: -50% !important;
+}
+#popup-google .modal-header p {
+	font-size: 12px;
+	line-height: 4px;
+}
+}
+</style>
+
+<!--put this code on code snippets [code 3 : css style for modal]-->
+
+<style>
+.font-34 {
+    font-size: 34px !important;
+}
+
+button.close {
+    border: 3px solid #3ABAEB;
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+}
+.close {
+    font-size: 18px;
+    opacity: 0.6;
+    transition: 0.3s;
+    line-height: 0;
+}
+.close:hover, .close:focus {
+    opacity: 1;
+}
+.btn-rounded {
+    border-radius: 50px;
+    padding: 12px 50px;
+}
+
+@media (max-width: 991px) {
+.modal-content {
+    margin-top: 100px;
+}
+}
+
+
+</style>

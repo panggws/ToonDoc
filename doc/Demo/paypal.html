@@ -1,0 +1,41 @@
+<!doctype>
+<html>
+<head></head>
+    <body>
+    
+        <FORM action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="charset" value="utf-8">
+            <input type="hidden" name="cmd" value="_cart">
+            <input type="hidden" name="upload" value="1">
+            <input type="hidden" name="business" value="toon.sell@mail.com">
+            
+            <input type="hidden" name="item_name_1" value="Memorex 128MB Memory Stick">
+            <input type="hidden" name="item_number_1" value="MEM32507128">
+            <input type="hidden" name="amount_1" value="3">
+<!--            <input type="hidden" name="tax_1" value="1">-->
+            <input type="hidden" name="quantity_1" value="1">
+            
+            <input type="hidden" name="item_name_2" value="Memorex 256MB Memory Stick">
+            <input type="hidden" name="item_number_2" value="MEM32507725">
+            <input type="hidden" name="amount_2" value="3">
+<!--            <input type="hidden" name="tax_2" value="1">-->
+            <input type="hidden" name="quantity_2" value="0">
+            
+            
+            <input type="hidden" name="currency_code" value="USD">
+
+            <!-- Enable override of buyers's address stored with PayPal . -->
+            <input type="hidden" name="address_override" value="1">
+            <!-- Set variables that override the address stored with PayPal. -->
+            <input type="hidden" name="first_name" value="John">
+            <input type="hidden" name="last_name" value="Doe">
+            <input type="hidden" name="address1" value="345 Lark Ave">
+            <input type="hidden" name="city" value="San Jose">
+            <input type="hidden" name="state" value="CA">
+            <input type="hidden" name="zip" value="95121">
+            <input type="hidden" name="country" value="US">
+            <input type="image" name="submit" border="0" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" alt="PayPal - The safer, easier way to pay online">
+        </FORM>
+        
+    </body>
+</html>

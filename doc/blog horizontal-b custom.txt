@@ -1,0 +1,21 @@
+.blog-list .media-heading {
+    font-size: 18px;
+}
+.blog-list .media-heading + p {
+    margin: 0;
+}
+
+================================
+============ mobile
+================================
+
+.blog-list .pull-left {
+    float: none !important;
+    margin: 0 0 10px;
+}
+.blog-list .pull-left a {
+    text-align: center;
+}
+.blog-list .media-heading {
+    text-align: center;
+}

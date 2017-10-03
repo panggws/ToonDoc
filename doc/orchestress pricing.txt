@@ -1,0 +1,48 @@
+$('.qty').on('change', function(){
+    
+        $(this).val(parseInt($(this).val()));
+    
+        var qty = $(this).val();
+        var title = $(this).prevAll('.title').html();
+
+        if(qty > 0) {
+            $(this).prevAll('.icon').addClass('active');
+        }else{
+            $(this).val(0);
+            $(this).prevAll('.icon').removeClass('active');
+        }
+
+        $('.gform_hidden').each(function(){
+            if($(this).val() == title) {
+                if(qty > 0) {
+                    $(this).nextAll('.ginput_quantity').val(qty);
+                    console.log('found');
+                }else{
+                    $(this).nextAll('.ginput_quantity').val('0');
+                    console.log('not found');
+                }
+            }
+        });
+        
+        $('#coupon .btn').on('click', function(){
+            $('#gf_coupon_code_32').val($('#coupon input').val());
+            ApplyCouponCode(32);
+        })
+        
+        total.on('DOMSubtreeModified', function(){
+          $("#amount").text(total.text());
+          $('#input_32_13').val(total.text());
+          
+        })
+        
+        $("#gf_coupon_info").on('DOMSubtreeModified', function(){
+            $('#coupon_info_copy').addClass('on');
+            $('#coupon_info_copy').html($("#gf_coupon_info").html())
+        })
+        
+        $('#coupon_info_copy a').on('click', function(){
+            $('#coupon_info_copy').removeClass('on');
+        })
+        
+        update_summary();
+    });

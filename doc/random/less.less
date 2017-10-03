@@ -1,0 +1,641 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
+
+h1, h2, h3, h4, h5, h6 ,.font-oxygen{
+  font-family: 'Oxygen' , lucida grande, Arial, sans-serif;
+}
+
+input, button, select, textarea, body {
+  font-family: 'Open Sans' , lucida grande, Arial, sans-serif;
+}
+strong {font-weight:700;}
+input, button, select, textarea, body {font-weight:400;}
+.font-600 {font-weight:600;}
+h1, h2, h3, h4, h5, h6 {font-weight: 400;}
+
+/****************************LESS CSS****************************/
+@baseColor : #144684;
+@buttonMain : #00519a;
+@darkColor : #00519a;
+@lightColor : #f0f0f0;
+@pixelfont: 13px;
+@line-height-base: 1.6;
+
+/*Helper function*/
+.mixin (@a) when (lightness(@a) >= 46%) {
+  color: @darkColor;
+}
+.mixin (@a) when not (lightness(@a) >= 46%) {
+  color: @lightColor;
+}
+::selection {
+  background: @baseColor;
+}
+::-moz-selection {
+  background: @baseColor;
+}
+
+.complementary(@_a){
+  background-color: @_a;
+  .mixin(@_a);
+}
+.btn(@b:@buttonMain){
+  border-color: @b;
+  .complementary(@b);
+  text-shadow: none;
+
+  &:hover,.disabled, [disabled]{
+    background-color: darken(@b, 4%);
+    border-color: darken(@b, 4%);
+    .mixin(@b);
+  }
+
+  &:active, .active, &:focus, .focus{
+    background-color: darken(@b, 8%);
+    border-color: darken(@b, 8%);
+    .mixin(@b);
+  }
+
+}
+.element(@_arg, @font:@_arg) {
+  a:hover,
+  .sidebar-content .nav.nav-tabs.nav-stacked .parent ul a.selected,
+  .sidebar-content .nav li li a:hover,
+  div[role="complementary"] div > ul > li:hover{
+    color:darken(@font,8%)
+  }
+  a,
+  .nav-tabs > .active > a,
+  .nav-tabs > .active > a:hover,
+  .nav-tabs > .active > a:focus,
+  .nav li a:hover,
+  .nav li a:focus,
+  .navbar .nav > li > a:focus,
+  .navbar .nav > li > a:hover,
+  .pagination ul > li > a:hover,
+  .pagination ul > li > a:focus,
+  .pagination ul > .active > a,
+  .pagination ul > .active > span,
+  nav[role="navigation"] .nav-normal > .active > a,
+  nav[role="navigation"] .nav-normal li a:hover,
+  nav[role="navigation"] .nav-pills-square > .active > a,
+  nav[role="navigation"] .nav-bar > li > a:hover,
+  nav[role="navigation"] .nav-bar > li > a:focus,
+  nav[role="navigation"] .nav-bar > .active > a,
+  nav[role="navigation"] .nav-bar-top > .active > a,
+  nav[role="navigation"] .nav-bar-top > li > a:hover,
+  nav[role="navigation"] .nav-bar-underline > .active > a,
+  nav[role="navigation"] .nav-underline > .active > a,
+  nav[role="navigation"] .nav-underline > li > a:hover,
+  nav[role="navigation"] .nav-separator > .active > a,
+  nav[role="navigation"] .nav-separator > li > a:hover,
+  .sidebar-content .nav a.active,
+  div[role="complementary"] div > ul > li:active,
+  .sidebar-content .nav li a:hover,
+  .sidebar-content .nav li a:focus {
+    color: @font;
+  }
+
+  .nav a:hover .caret {
+    border-bottom-color: @font;
+    border-top-color: @font;
+  }
+  .nav-tabs > li > a:hover,
+  .nav-tabs > li > a:focus,
+  .navbar .nav > .active > a,
+  .navbar .nav > .active > a:hover,
+  .navbar .nav > .active > a:focus,
+  .nav-pills > .active > a,
+  .nav-pills > .active > a:hover,
+  .nav-pills > .active > a:focus,
+  .nav-tabs.nav-stacked > .active > a,
+  .nav-tabs.nav-stacked > .active > a:hover,
+  .nav-tabs.nav-stacked > .active > a:focus,
+  .nav-list > .active > a,
+  .nav-list > .active > a:hover,
+  .nav-list > .active > a:focus,
+  .grid li a:hover img,
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus,
+  .gform_wrapper li.gfield_error input[type="text"]:focus,
+  .gform_wrapper li.gfield_error input[type="url"]:focus,
+  .gform_wrapper li.gfield_error input[type="email"]:focus,
+  .gform_wrapper li.gfield_error input[type="tel"]:focus,
+  .gform_wrapper li.gfield_error input[type="number"]:focus,
+  .gform_wrapper li.gfield_error input[type="password"]:focus,
+  .gform_wrapper li.gfield_error textarea:focus{
+    border-color: @_arg;
+  }
+  .navbar .nav > .active > a,
+  .navbar .nav > .active > a:hover,
+  .navbar .nav > .active > a:focus,
+  .nav-pills > .active > a,
+  .nav-pills > .active > a:hover,
+  .nav-pills > .active > a:focus,
+  .nav-tabs.nav-stacked > .active > a,
+  .nav-tabs.nav-stacked > .active > a:hover,
+  .nav-tabs.nav-stacked > .active > a:focus,
+  .nav-list > .active > a,
+  .nav-list > .active > a:hover,
+  .nav-list > .active > a:focus,
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus,
+  .dropdown-submenu:hover > a,
+  .dropdown-submenu:focus > a,
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus,
+  .progress .bar,
+  .progress-striped .bar,
+  .progress-info.progress-striped .bar, .progress-striped .bar-info,
+  nav[role="navigation"] .nav-pills-square li a:hover{
+    background-color:  @_arg;
+  }
+
+  .form-control:focus{
+    border-color: @_arg;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(red(@_arg),green(@_arg), blue(@_arg), 0.6);
+  }
+
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+    background-color: @_arg;
+    border-color: @_arg;
+  }
+
+}
+
+
+body, p, .gform_body .gfield input, .gform_body .gfield textarea, .gform_body .gfield select{
+  font-size: @pixelfont;
+  line-height: @line-height-base;
+}
+h1{
+  font-size: (@pixelfont * 3);
+  line-height: (@pixelfont * 3) + 10;
+}
+h2{
+  font-size: 19px;
+  line-height: (@pixelfont * 1.5) + 10;
+}
+h3{
+  font-size: (@pixelfont * 1.17);
+  line-height: (@pixelfont * 1.17) + 10;
+}
+h4{
+  font-size: (@pixelfont * 1) + 2;
+  line-height: (@pixelfont * 1) + 10;
+}
+h5{
+  font-size: (@pixelfont * 0.83);
+  line-height: (@pixelfont * 0.83) + 10;
+}
+h6{
+  font-size: (@pixelfont * 0.75);
+  line-height: (@pixelfont * 0.75) + 10;
+}
+
+/*scrolltotop*/
+#topcontrol {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  border-radius: 3px;
+  color: #FFFFFF;
+  height: 48px;
+  line-height: 55px;
+  margin: 0 15px 15px 0;
+  text-align: center;
+  width: 48px;
+  z-index: 10000;
+}
+#scrolltotop:before {
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #FFFFFF;
+  border-image: none;
+  border-style: solid;
+  border-width: 10px;
+  content: "";
+  height: 0;
+  left: 28%;
+  position: absolute;
+  top: 17%;
+  width: 0;
+}
+
+#topcontrol:hover{
+  background-color: darken(@baseColor,10%);
+}
+
+/****************************END LESS CSS****************************/
+
+/****************************Overwrite CSS****************************/
+.element(@buttonMain);
+
+.accent{
+  color: @baseColor !important;
+}
+
+.accent2{
+  color: #dadada !important;
+}
+.accent-white {
+  color: #fff !important;
+}
+
+.font-size-29 {
+  font-size: 29px;
+  line-height: 35px;
+}
+.font-size-26 {
+  font-size: 26px;
+  line-height: 32px;
+}
+.font-size-19 {
+  font-size: 19px;
+  line-height: 24px;
+}
+.font-size-16 {
+  font-size: 16px;
+  line-height: 19px;
+}
+.font-size-15 {
+  font-size: 15px;
+  line-height: 18px;
+}
+
+
+.btn-primary{
+  .btn;
+}
+
+.btn-custom{
+  .btn(#fff);
+}
+.btn-custom2{
+  .btn(#0885C5);
+  background: #0885C5 !important;
+}
+
+.btn-fancy{
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #289ff1;
+  -webkit-box-shadow: inset 0 1px rgba(255,255,255,.41);
+  -moz-box-shadow: inset 0 1px rgba(255,255,255,.41);
+  box-shadow: inset 0 1px rgba(255,255,255,.41);
+  border: solid 1px #000;
+  background-image: linear-gradient(to top, #044f8f, #2183c5);
+  background-image: -webkit-linear-gradient(bottom, #044f8f, #2183c5);
+  background-image: -moz-linear-gradient(bottom, #044f8f, #2183c5);
+  background-image: -o-linear-gradient(bottom, #044f8f, #2183c5);
+  font-family: Tahoma;
+  font-size: 11px;
+  margin: 0 3px;
+  padding: 6px 11px;
+  text-shadow: 0 1px #000;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover, &:focus , &:active{
+    color: #fff;
+    background-color: #044f8f;
+    background-image: linear-gradient(to top, #2183c5, #044f8f);
+    background-image: -webkit-linear-gradient(bottom, #2183c5, #044f8f);
+    background-image: -moz-linear-gradient(bottom, #2183c5, #044f8f);
+    background-image: -o-linear-gradient(bottom, #2183c5, #044f8f);
+    text-decoration: none;
+  }
+}
+.btn-top-nav:hover,
+.btn-top-nav:active,
+.btn-top-nav:focus {
+  background: none repeat scroll 0 0 #00519a;
+  border: 0 none;
+  color: #fff;
+}
+.btn-top-nav {
+  background: none repeat scroll 0 0 #0673b6;
+  border: 0 none;
+  border-radius: 0;
+  color: #fff;
+  padding: 19px 15px 18px;
+}
+
+.top-nav .search-query {
+  background: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  color: #606060;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.top-nav .navbar-search{
+  margin-top: 10px;
+}
+
+header nav[role="navigation"] > ul > li > a {
+  color: #656565;
+  font-size: 15px;
+  margin-left: 15px;
+
+  &:hover, &:focus, &:active{
+    background: #0985C5;
+    color: #fff;
+  }
+}
+
+header nav[role="navigation"] > ul > .active > a{
+  background: #0985C5;
+  color: #fff;
+  &:hover, &:focus, &:active{
+    background: #0985C5;
+    color: #fff;
+  }
+}
+.nav .active a .caret {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+}
+.nav a:hover .caret,
+.nav a:active .caret,
+.nav a:focus .caret {
+  border-bottom-color: #fff;
+  border-top-color: #fff;
+}
+
+nav[role="navigation"] ul:first-child {
+  margin: 23px 0 0;
+}
+.dropdown-menu li:hover a {
+  color: #fff;
+}
+
+.well-slides {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 8px;
+  padding: 15px 0 15px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hr-custom{
+  background: url("http://objectiveuk.bypronto.com/wp-content/uploads/sites/325/2014/02/shadow.jpg") no-repeat;
+  background-size: cover;
+  height: 34px;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-color: transparent;
+}
+
+.hr-thick-line{
+  border-color: #d0d0d0;
+  border-width: 5px;
+}
+
+hr{
+  border-color: #d0d0d0;
+}
+
+.well-white{
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 9px rgba(0,0,0,.28);
+  -moz-box-shadow: 0 0 9px rgba(0,0,0,.28);
+  box-shadow: 0 0 9px rgba(0,0,0,.28);
+  border: solid 1px #d8d8d8;
+}
+
+.well-white .grid li a img {
+  border: 1px solid rgba(0, 0, 0, 0);
+  height: 100px;
+  margin-left: 15px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.well-custom{
+  background-color: #fafafa;
+  -webkit-box-shadow: 0 0 9px rgba(0,0,0,.28);
+  -moz-box-shadow: 0 0 9px rgba(0,0,0,.28);
+  box-shadow: 0 0 9px rgba(0,0,0,.28);
+  border: solid 1px #d8d8d8;
+}
+
+.well-custom input[type="text"],
+.well-custom input[type="tel"],
+.well-custom input[type="email"]{
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: solid 1px #d0d0d0;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.1), rgba(255,255,255,.1) 49%);
+  background-image: -webkit-linear-gradient(top, rgba(0,0,0,.1), rgba(255,255,255,.1) 49%);
+  background-image: -moz-linear-gradient(top, rgba(0,0,0,.1), rgba(255,255,255,.1) 49%);
+  background-image: -o-linear-gradient(top, rgba(0,0,0,.1), rgba(255,255,255,.1) 49%);
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.well-custom .gfield_label{
+  font-weight: normal !important;
+}
+
+.well-custom input[type="submit"]{
+  font-weight: bold;
+}
+
+.heading-font{
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.cta-footer h2{
+  line-height: 1.1;
+  font-size: 21px;
+}
+
+.main-footer h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.main-footer .icon-stack {
+  font-size: 24px;
+}
+
+.main-footer .phone {
+  margin-top: 50px;
+}
+
+.main-footer hr {
+  margin: 10px 0;
+}
+
+.non-underline{
+  text-decoration: none !important;
+}
+
+.modal-header {
+  border-bottom: medium none rgba(0, 0, 0, 0);
+}
+
+header nav[role="navigation"] ul  li .dropdown-menu {
+  left: 15px;
+}
+.section-border-bottom {
+  border-bottom: 5px solid #ebebeb !important;
+}
+.bg-grey {
+  background: none repeat scroll 0 0 #ebebeb;
+}
+
+/****************************Top Nav pure****************************/
+.fontsize-18 {
+  font-size: 18px
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #hp-banner .row > .col-md-7 {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.75);
+  }
+  .btn-top-nav {
+    padding: 18px 12px;
+  }
+  .btn-fancy{
+    padding: 6px;
+    font-size: 10px;
+  }
+  header nav[role="navigation"] > ul > li > a {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 991px) {
+  header nav[role="navigation"] ul li .dropdown-menu {
+    left: 0;
+  }
+  nav[role="navigation"] ul:first-child {
+    margin: 28px 0 0;
+  }
+  #hp-banner .container {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.75);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  header nav[role="navigation"] > ul > li > a {
+    font-size: 13px;
+    margin-left: 0;
+    padding: 5px 4px;
+  }
+
+  nav[role="navigation"] select{
+    margin: 26px 0;
+  }
+
+  .hp-banner h1 {
+    font-size: 27px;
+  }
+
+  .hp-banner p {
+    font-size: 19px;
+  }
+
+  .well-white .grid li a img {
+    height: auto;
+    margin-left: 0;
+  }
+
+  .main-footer hr {
+    margin: 2px 0;
+  }
+
+  .hr-custom {
+    background: url("http://objectiveuk.bypronto.com/wp-content/uploads/sites/325/2014/02/shadow.jpg") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    height: 34px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .top-nav .navbar-search {
+    margin-bottom: 10px;
+  }
+  .xs-text-center{
+    text-align: center;
+  }
+
+  .xs-no-mobile-margin-top{
+    margin-top: 5%;
+  }
+
+  header .brand img {
+    width: auto;
+  }
+
+  .hp-banner h1 {
+    font-size: 24px;
+  }
+
+  .hp-banner p {
+    font-size: 13px;
+  }
+  .font-size-29 {
+    font-size: 27px;
+    line-height: 32px;
+  }
+  .well-white .grid li a img {
+    height: auto;
+    margin-left: 0px;
+  }
+
+  .heading-font {
+    font-size: 23px;
+  }
+
+  .hr-custom {
+    background: url("http://objectiveuk.bypronto.com/wp-content/uploads/sites/325/2014/02/shadow.jpg") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+    height: 15px;
+  }
+
+  .cta-footer h2 {
+    font-size: 17px;
+  }
+
+  .cta-footer .btn {
+    font-size: 15px;
+  }
+
+  .main-footer .bg-footer {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  }
+
+  .main-footer .social-sets {
+    margin-top: 50px;
+  }
+}
+/****************************Custom CSS****************************/

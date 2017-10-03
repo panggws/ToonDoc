@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recovery Time & Dowtine Cost Calculator</title>
+	<meta name="description" content="Evaluate your recovery time and recovery point objectives and determine the cost of downtime.">
+	<meta name="keywords" content="recovery time, recovery, time, objective, calculator, point, cost of downtime, cost, downtime, evaluate">
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="http://absolutelogic.prontopreview.com/favicon/absolutelogic.ico" type="image/x-icon">
+	
+	<link type="text/css" rel="stylesheet" media="screen" href="http://absolutelogic.prontopreview.com/wp-content/themes/core/css/widgets.css" />
+	<link type="text/css" rel="stylesheet" media="screen" href="http://absolutelogic.prontopreview.com/wp-content/themes/core/style.css" />
+	<link type="text/css" rel="stylesheet" media="screen" href="http://absolutelogic.prontopreview.com/wp-content/themes/core/css/iterations/theme02_styleC.css" />
+	<link type="text/css" rel="stylesheet" media="screen" href="http://absolutelogic.prontopreview.com/wp-content/themes/core/clients/absolutelogic/css/absolutelogic.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tooltip.css" />
+    <link rel="stylesheet" href="css/jQuery-UI.css" />
+
+    <script type="text/javascript" src="//use.typekit.net/sre7xmr.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="js/jQuery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+</head>
+<body class="onecolumn">
+<div class="wrapper">
+<!--Start header>-->
+<div id="header">
+			<div id="headerInside">
+			<div id="logo"><a href="/"><img border="0" alt=" - it support" src="http://absolutelogic.prontopreview.com/files/Logo.png"></a></div>
+			<div class="widgetarea" id="header_widgets"><div class="headerwidget widget_search" id="search-3"><form action="http://www.absolutelogic.com/" class="searchform" id="searchform" method="get" role="search">
+				<div>
+					<label for="s" class="screen-reader-text">Search for:</label>
+					<input type="text" id="s" name="s" value="">
+					<input type="submit" value="Search" id="searchsubmit">
+				</div>
+			</form></div><div class="headerwidget navigation_one_level_multi" id="navigation_one_level-multi-2"> <div class="navigation_one_level">
+  <h3></h3>
+    <ul>
+						<li class="first"><a title="Home" href="/">Home</a></li>
+						<li><a title="Support Center" href="/about-us/support-center/">Support Center</a></li>
+						<li><a title="Customer Login" href="/customer-login/">Customer Login</a></li>
+		    </ul>
+</div>
+</div><div class="headerwidget icon_multi" id="icon-multi-2"><div class="icon-wid"><a href="/about-us/contact-us/"><img alt="it consulting stamford, CT" src="http://absolutelogic.prontopreview.com/files/icon/phone.png"></a></div>
+    <div class="icon-text">
+      <div class="text ">
+                  <h3><a href="/about-us/contact-us/">Contact Us!</a></h3>
+            <div class="description"><a href="/about-us/contact-us/">(203) 936-6680</a></div>
+      </div>
+    </div></div></div>
+			</div>
+		</div>
+<!-- End header-->
+<!-- Start nav -->
+<div id="navigation_widgets"><div id="navigation_widgets_inside">
+<ul class="sf-menu">
+                <li class="page-item">
+          <a href="http://www.absolutelogic.com/"><span>Home</span></a>
+          </li>
+                <li class="page-item ">
+          <a href="http://www.absolutelogic.com/services-solutions/"><span>Services</span></a>
+              <ul id="l2-services-solutions">		
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/managed-services/"><span>Managed Services</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/it-consulting/"><span>IT Consulting</span></a>
+										<ul id="l3-it-consulting">
+													<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/it-consulting/security/"><span>Security</span></a></li>
+													<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/it-consulting/on-demand-services/"><span>On Demand Services</span></a></li>
+													<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/it-consulting/office-moves-wiring/"><span>Office Moves &amp; Wiring</span></a></li>
+							
+						</ul>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/cloud-computing/"><span>Cloud Computing</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/virtualization/"><span>Virtualization</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/email-spam-protection/"><span>Email &amp; Spam Protection</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/online-backup/"><span>Online Backup and Disaster Recovery</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/website-development-and-hosting/"><span>Website Development and Hosting</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/voip/"><span>Voice Over IP</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/services-solutions/it-security-compliance/"><span>IT Security &amp; Compliance</span></a>
+							</li>
+				</ul>
+         </li>
+                <li class="page-item ">
+          <a href="/who-we-service/industry-specific-solutions/"><span>Who We Service</span></a>
+              <ul id="l2-industry-specific-solutions">		
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/who-we-service/small-medium-businesses/"><span>Small-Medium Businesses</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/who-we-service/industry-specific-solutions/"><span>Industry-Specific  Solutions</span></a>
+										<ul id="l3-industry-specific-solutions">
+													<li class="page-item"><a href="http://www.absolutelogic.com/who-we-service/industry-specific-solutions/legal/"><span>Legal</span></a></li>
+													<li class="page-item"><a href="http://www.absolutelogic.com/who-we-service/industry-specific-solutions/medical/"><span>Medical</span></a></li>
+													<li class="page-item"><a href="http://www.absolutelogic.com/who-we-service/industry-specific-solutions/insurance/"><span>Insurance</span></a></li>
+							
+						</ul>
+							</li>
+				</ul>
+         </li>
+                <li class="page-item ">
+          <a href="http://www.absolutelogic.com/why-absolute-logic/"><span>Why Absolute Logic</span></a>
+              <ul id="l2-why-absolute-logic">		
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/why-absolute-logic/testimonials/"><span>Testimonials</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/why-absolute-logic/client-of-the-month/"><span>Client of the Month</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/why-absolute-logic/partners-certifications/"><span>Partners &amp; Certifications</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/why-absolute-logic/affiliations/"><span>Affiliations</span></a>
+							</li>
+				</ul>
+         </li>
+                <li class="page-item ">
+          <a href="http://www.absolutelogic.com/free-stuff/"><span>Free Stuff</span></a>
+              <ul id="l2-free-stuff">		
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/free-stuff/free-network-audit/"><span>FREE Network Audit</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/free-stuff/articles-free-reports/"><span>Articles / FREE Reports</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/free-stuff/newsletter-archive/"><span>Newsletter Archive</span></a>
+							</li>
+				</ul>
+         </li>
+                <li class="page-item ">
+          <a href="http://www.absolutelogic.com/about-us/"><span>About Us</span></a>
+              <ul id="l2-about-us">		
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/about-us/referral-program/"><span>Referral Program</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/about-us/contact-us/"><span>Contact Us</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/about-us/support-center/"><span>Support Center</span></a>
+							</li>
+			
+			<li class="page-item"><a href="http://www.absolutelogic.com/about-us/blog/"><span>Blog</span></a>
+							</li>
+				</ul>
+         </li>
+  </ul>
+</div>
+</div>
+<!-- End nav -->
+<div id="contentWrapper">
+			<div id="contentWrapperInside">
+				<div class="content" id="content">
+<div id="bottomBorder"></div>
+<h1 class="mainText" style="text-align:center">Recovery Time Calculator</h1>
+<h2 class="description dark opacity5" style="text-align:center">Evaluate your recovery time and recovery point objectives</h2>				
+<div id="calcContainer">
+    <form id="calculator" novalidate>
+        <!-- Target Recovery Time Objective -->
+        <div class="uppercase center blockTitle">Set<span class="bold">Objectives</span></div>
+        <div class="targetBox">
+            <div id="recoveryTimeBox" class="target">
+                <div class="rtoTitle uppercase center">
+                    <div class="tooltipHolder">
+                        <h2 class="bold wrapper">Recovery Time Objective</h2>
+                        <div class="tooltip notbold">How much time can your business go without accessing its critical systems/servers?</div>
+                    </div>
+                    <!-- <p class="light">Maximum amount of time it should take<br /> to recover disrupted data</p> -->
+                </div>
+                <div class="rtoTarget">
+                    <label>
+                        <input type="number" id="rtoHr" min="0" max="240" value="0" class="spinner"><div class="uppercase bold labelUnit">hr</div>
+                        <input type="number" id="rtoMin" min="0" max="59" value="30" class="spinner" step="5"><div class="uppercase bold labelUnit">min</div>
+                    </label>
+                </div>
+            </div>
+        <!-- Target Recovery Point Objective -->
+            <div class="targetBox">
+                <div id="recoveryPointBox" class="target">
+                    <div class="rpoTitle uppercase center">
+                        <div class="tooltipHolder">
+                            <h2 class="bold">Recovery Point Objective</h2>
+                            <div class="tooltip notbold">How much production time on those servers are you willing to lose?</div>
+                        </div>
+                        <!-- <p class="light">Maximum tolerable period of work time<br /> that data can be lost</p> -->
+                    </div>
+                    <div class="rpoTarget">
+                        <label>
+                            <input type="number" id="rpoHr" min="0" max="240" value="12"><div class="uppercase bold labelUnit">hr</div>
+                            <input type="number" id="rpoMin" min="0" max="59" value="0" step="5"><div class="uppercase bold labelUnit">min</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uppercase center blockTitle"><p>Recovery<span class="bold">Process</span></p></div>
+        <div id="recoveryInfo">
+            <div id="col1" class="center">
+                <ul class="columnList uppercase bold">
+                    <li class="margin32">
+                        <div class="tooltipHolder">
+                            <span class="wrapper">How much is on your critical business systems?</span>
+                            <div class="tooltip notbold">Critical systems are the systems essential to your business operations</div>
+                        </div>
+                    </li>
+                    <li class="margin32">
+                        <div class="tooltipHolder">
+                            <span class="wrapper">How often do you currently backup these systems?</span>
+                            <div class="tooltip notbold">The time between each backup</div>
+                        </div>
+                    </li>
+                    <li class="margin32">
+                        <div class="tooltipHolder">
+                            <span class="wrapper">How long does is take to initiate your recovery process?</span>
+                            <div class="tooltip notbold">This is the amount of time that it will take you to prepare the systems for a recovery or restore</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tooltipHolder">
+                            <span class="wrapper">Are you recovering data from a local network or the cloud?</span>
+                            <div class="tooltip notbold">This can affect the recovery speed</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="col2">
+                <ul class="columnList uppercase bold">
+                    <!-- Data Disrupted -->
+                    <li class="margin27"><label>
+                        <input type="number" id="dataDisrupted" min="0" max="9999" value="250" step="10"><div class="labelUnit">gb</div>
+                    </li></label>
+                    <!-- Backup Interval -->
+                    <li class="margin27"><label>
+                        <input type="number" id="backupHr" min="0" max="240" value="12"><div class="labelUnit">hr</div>
+                        <input type="number" id="backupMin" min="0" max="59" value="0" step="5"><div class="labelUnit">min</div>
+                    </li></label>
+                    <!-- Time to Initiate Recovery -->
+                    <li class="margin27"><label>
+                        <input type="number" id="recoveryHr" min="0" max="999" value="1"><div class="labelUnit">hr</div>
+                        <input type="number" id="recoveryMin" min="0" max="59" value="0" step="5"><div class="labelUnit">min</div>
+                    </li></label>
+                    <!-- Recovery Transfer Speed -->
+                    <li class="bottomList"><label>
+                        <input type="radio" name="transferSpeed" id="onSite" name="transferSpeed" value="800" checked>
+                        <label for="onSite">LOCAL</label>
+                        <input type="radio" name="transferSpeed" id="offSite" name="transferSpeed" value="30">
+                        <label for="offSite">CLOUD</label>
+                    </li></label>
+                </ul>
+            </div>
+        </div>
+        <div class="uppercase center blockTitle">Downtime<span class="bold">Costs</span></div>
+        <div id="downtimeCosts">
+            <div id="col3" class="center">
+                <ul class="columnList uppercase bold">
+                    <li class="margin32">How many employees would be affected if the critical systems failed?</li>
+                    <li class="margin32">What would be the average wage of the affected employees?</li>
+                    <li class="margin32">What is the overhead cost per hour of the affected employees?</li>
+                    <li>How much revenue would be lost as a result of the system failure?</li>
+                </ul>
+            </div>
+            <div id="col4">
+                <ul class="columnList uppercase bold">
+                    <!-- Number of employees affected -->
+                    <li class="margin27"><label>
+                        <input type="number" id="affectedEmployees" min="0" max="1000" value="20" step="1"><div class="labelUnit">employees</div>
+                    </li></label>
+                    <!-- Avg. wage of affected employees -->
+                    <li class="margin27"><label>
+                        <input type="number" id="averageWage" min="0" max="1000" value="20" step="1"><div class="labelUnit">dollars per hour</div>
+                    </li></label>
+                    <!-- Overhead cost per hour -->
+                    <li class="margin27"><label>
+                        <input type="number" id="overheadCost" min="0" max="1000" value="0" step="10"><div class="labelUnit">dollars per hour</div>
+                    </li></label>
+                    <!-- Opportunity cost of business lost -->
+                    <li class="bottomList"><label>
+                        <input type="number" id="businessLost" min="0" max="10000000" value="0" step="100"><div class="labelUnit">dollars per hour</div>
+                    </li></label>
+                </ul>
+            </div>
+        </div>
+        <div id="calcButton">
+            <button type="submit" id="openModal" class="uppercase bold blockTitle medium"><span class="bold">Calculate</span></button>
+            <input id="totalRTO" disabled="disabled" type="hidden"/>
+            <div id="results">
+                <p><div id="calc1"></div></p>
+                <p class="left"><span id="downtimeCost" class="uppercase bold medium2"/>Total Downtime Cost <span class="notbold medium2">(downtime * cost per hr)</span></p>
+                <p class="large left"><span id="calc3" class=" counter"></span><span class ="red bold">$</span></span><span id="countedCost" class="red bold">0</span></p><br /><br />
+                <div class="floatLeft">
+                    <p><span id="rtoStatement" class="uppercase bold dark"/></p>
+                    <p><span id="rpoStatement" class="uppercase bold dark"/></p>
+                </div>
+                <input id="printBtn" type="button" value="print" class="uppercase bold medium"/>
+            </div>
+        </div>
+    </form>
+</div>
+</div>	
+</div>
+</div>
+<div id="footer" class="footerText uppercase bold">Powered by <a href="http://dattobackup.com" target="_blank">Datto</a></div>
+
+<script src="js/calculate.js"></script>
+
+<script type="text/javascript">
+    $("#printBtn").click(function(){
+        console.log('Print Button Clicked');
+        printcontent($("#results").html());
+    });
+
+    function printcontent(results)
+    {
+        var mywindow = window.open('', '', '');
+        mywindow.document.write('<html><title>Recovery Time Analysis</title><body>');
+        mywindow.document.write(results);
+        mywindow.document.write('</body></html>');
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48211541-1', 'dattobackup.com');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+    (function() {
+        var didInit = false;
+        function initMunchkin() {
+            if(didInit === false) {
+                didInit = true;
+                Munchkin.init('120-EZH-789');
+            }
+        }
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//munchkin.marketo.net/munchkin-beta.js';
+        s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+                initMunchkin();
+            }
+        };
+        s.onload = initMunchkin;
+        document.getElementsByTagName('head')[0].appendChild(s);
+    })();
+</script>
+</div>
+</body>
+</html>

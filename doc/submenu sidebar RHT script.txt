@@ -1,0 +1,21 @@
+<script>
+$(document).ready(function() {
+   var location = window.location.pathname;
+   var location_split = location.split("/");
+   console.log("split = ",location_split[1]);
+   
+   //var string_location = location.replace(/\//g,"");
+   //console.log("current_location = " + string_location);
+   
+   $('#sub-menu .sub-menu-item a').each(function() {
+       var submenu_link = $(this).attr("href");
+       var submenu_string = submenu_link.replace(/\//g,"").toLowerCase();
+       //console.log("submenu_link = " + submenu_string);
+       if( submenu_string === location_split[1]) {
+           $(this).addClass('selected');
+       }else {
+           $(this).removeClass('selected');
+       }
+   });
+});
+</script>

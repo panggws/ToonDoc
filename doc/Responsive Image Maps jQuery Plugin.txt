@@ -1,0 +1,23 @@
+Allows image maps to be used in a responsive design 
+by recalculating the area coordinates to match the actual image size on load and window.resize
+Github : https://github.com/stowball/jQuery-rwdImageMaps
+
+ticket issue : https://pronto.zendesk.com/agent/tickets/219700
+
+sample : http://digitalnex.bypronto.com/?p=3338 
+http://www.capstoneitinc.com/capstone-campus/
+
+Usage : 
+
+<script src="/wp-content/uploads/sites/240/scripts/jquery.rwdImageMaps.min.js"></script>
+<script>
+var $ = jQuery.noConflict();
+$(document).ready(function(e) {
+    $('img[usemap]').rwdImageMaps();
+    $('area').on('click', function() {
+        $( "this" ).click();
+    });
+});
+</script>
+
+By P'Saa

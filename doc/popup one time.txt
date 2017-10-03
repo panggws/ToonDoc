@@ -1,0 +1,16 @@
+<script>
+$(document).ready(function() {
+    var check = false;
+    console.log('hello');
+    if(localStorage.getItem('popState') != 'shown'){
+        $(window).scroll(function(){
+            var current_scroll_top = $(document).scrollTop();
+                if (current_scroll_top > 500 && check == false) {
+                     $('#purchase').modal();   
+                     check = true;
+                     localStorage.setItem('popState','shown');
+                }    
+        });
+    }
+});
+</script>

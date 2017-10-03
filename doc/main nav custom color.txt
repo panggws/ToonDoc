@@ -1,0 +1,61 @@
+nav[role="navigation"] .nav > li {
+	> a {
+    color: #fff;
+    text-transform: uppercase;
+		.caret {
+    	border-bottom-color: #fff;
+    	border-top-color: #fff;
+		}
+		&:hover, &:active, &:focus {
+			background: transparent;
+    	color: @baseColor;
+			.caret {
+    		border-bottom-color: @baseColor;
+    		border-top-color: @baseColor;
+			}
+		}
+	}
+	&.active > a {
+    color: @baseColor;
+		.caret {
+    	border-bottom-color: @baseColor;
+    	border-top-color: @baseColor;
+		}
+	}
+}
+nav[role="navigation"] .nav .dropdown-menu > li {
+	&:hover > a, &:active > a, &:focus > a,
+	> a:hover, > a:active, > a:focus {
+    color: #fff;
+	}
+}
+
+
+====================================================
+=================== Underline
+====================================================
+nav[role="navigation"] .nav-bar-underline > li {
+	> a {
+    padding: 35px 20px;
+		&:hover {
+    	box-shadow: 0 -5px 0 0 #bc598b inset;
+		}
+	}
+	&.active > a {
+    box-shadow: 0 -5px 0 0 #bc598b inset;
+	}
+}
+
+====================================================
+=================== Dot
+====================================================
+.menu-effect-4 > li > a:hover::before, 
+.menu-effect-4 > li > a:focus::before, 
+.menu-effect-4 > .active > a::before {
+    color: @baseColor;
+    text-shadow: 10px 0 @baseColor, -10px 0 @baseColor;
+}
+.menu-effect-4 > li > a::before {
+    font-size: 1.4em;
+    top: 80%;
+}

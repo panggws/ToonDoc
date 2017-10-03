@@ -1,0 +1,9 @@
+[tabs type="tab" active="1"]
+[tab title="Text"]
+<h2 class="text-center margin-top-40 no-mobile-margin-top"><strong>Sign up for Instructor Training and be a certified Bolly Active Licensed Instructor (BALI)</strong></h2>
+Our dynamic program equips participants with practical and theoretical knowledge to become a successful Bolly Active Licensed Instructor. Our certification program trains participants in Bolly Active formula, South Asian dance styles, dance &amp; toning essentials, nutrition, body anatomy, business building skills, coaching and safety. Absolutely no prior south Asian dance experience is required, we nurture an incredibly diverse team of instructors worldwide. You will also receive full support via online instructor portal and helping you gain an insight into the colourful world of Bollywood and fitness.
+[/tab]
+[tab title="Video"]
+<div class="videoWrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/NsRGt3RJfYA" frameborder="0" allowfullscreen></iframe></div>
+[/tab]
+[/tabs]

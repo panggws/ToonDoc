@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://www.allarus.com/" />
+<title>update_all_posts</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">update_all_posts</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>class=total-pages</td>
+	<td>page</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>css=input[id=current-page-selector]@value</td>
+	<td>current_page</td>
+</tr>
+<tr>
+    <td>echo</td>
+    <td>${current_page}</td>
+    <td></td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>storedVars['current_page']&lt;=storedVars['page']</td>
+	<td></td>
+</tr>
+<!--start to update post #1-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #2-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #3-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #4-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #5-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #6-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #7-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #8-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #9-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[9]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #10-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[10]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #11-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[11]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #12-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[12]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #13-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[13]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #14-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[14]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #15-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[15]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #16-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Posts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[16]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #17-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[17]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #18-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[18]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #19-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[19]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<!--start to update post #20-->
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[text()='Edit'])[20]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=publish</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/wp-admin/edit.php?paged=${current_page}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=//div[@class='tablenav-pages']/span[2]/a[@class='next-page']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>tmp=storedVars['current_page'];tmp++; storedVars['current_page']=tmp</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

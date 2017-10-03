@@ -1,0 +1,365 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+h1, h2, h3, h4, h5, h6, input, button, select, textarea, body {
+  font-family: "Raleway", lucida grande, Arial, sans-serif;
+}
+strong {font-weight:600;}
+input, button, select, textarea, body {font-weight:400;}
+h1, h2, h3, h4, h5, h6{font-weight:400;}
+
+/****************************LESS CSS****************************/
+@baseColor : #293174;
+@buttonMain : #24a848;
+@darkColor : #1c1c1c;
+@lightColor : #fff;
+@pixelfont: 16px;
+@line-height-base: 1.5;
+
+/*Helper function*/
+.mixin (@a) when (lightness(@a) >= 66%) {
+  color: @darkColor;
+}
+.mixin (@a) when not (lightness(@a) >= 66%) {
+  color: @lightColor;
+}
+::selection {
+  background: @baseColor;
+}
+::-moz-selection {
+  background: @baseColor;
+}
+
+.complementary(@_a){
+  background-color: @_a;
+  .mixin(@_a);
+}
+.btn(@b:@buttonMain){
+  border-color: @b;
+  .complementary(@b);
+  text-shadow: none;
+
+  &:hover,.disabled, [disabled]{
+    background-color: darken(@b, 4%);
+    border-color: darken(@b, 4%);
+    .mixin(@b);
+  }
+
+  &:active, .active, &:focus, .focus{
+    background-color: darken(@b, 8%);
+    border-color: darken(@b, 8%);
+    .mixin(@b);
+  }
+
+}
+.element(@_arg, @font:@_arg) {
+  a:hover,
+  .sidebar-content .nav.nav-tabs.nav-stacked .parent ul a.selected,
+  .sidebar-content .nav li li a:hover,
+  div[role="complementary"] div > ul > li:hover{
+    color:darken(@font,8%)
+  }
+  a,
+  .nav-tabs > .active > a,
+  .nav-tabs > .active > a:hover,
+  .nav-tabs > .active > a:focus,
+  .nav li a:hover,
+  .nav li a:focus,
+  .navbar .nav > li > a:focus,
+  .navbar .nav > li > a:hover,
+  .pagination ul > li > a:hover,
+  .pagination ul > li > a:focus,
+  .pagination ul > .active > a,
+  .pagination ul > .active > span,
+  nav[role="navigation"] .nav-normal > .active > a,
+  nav[role="navigation"] .nav-normal li a:hover,
+  nav[role="navigation"] .nav-pills-square > .active > a,
+  nav[role="navigation"] .nav-bar > li > a:hover,
+  nav[role="navigation"] .nav-bar > li > a:focus,
+  nav[role="navigation"] .nav-bar > .active > a,
+  nav[role="navigation"] .nav-bar-top > .active > a,
+  nav[role="navigation"] .nav-bar-top > li > a:hover,
+  nav[role="navigation"] .nav-bar-underline > .active > a,
+  nav[role="navigation"] .nav-underline > .active > a,
+  nav[role="navigation"] .nav-underline > li > a:hover,
+  nav[role="navigation"] .nav-separator > .active > a,
+  nav[role="navigation"] .nav-separator > li > a:hover,
+  .sidebar-content .nav a.active,
+  div[role="complementary"] div > ul > li:active,
+  .sidebar-content .nav li a:hover,
+  .sidebar-content .nav li a:focus {
+    color: @font;
+  }
+
+  .nav a:hover .caret {
+    border-bottom-color: @font;
+    border-top-color: @font;
+  }
+  .nav-tabs > li > a:hover,
+  .nav-tabs > li > a:focus,
+  .navbar .nav > .active > a,
+  .navbar .nav > .active > a:hover,
+  .navbar .nav > .active > a:focus,
+  .nav-pills > .active > a,
+  .nav-pills > .active > a:hover,
+  .nav-pills > .active > a:focus,
+  .nav-tabs.nav-stacked > .active > a,
+  .nav-tabs.nav-stacked > .active > a:hover,
+  .nav-tabs.nav-stacked > .active > a:focus,
+  .nav-list > .active > a,
+  .nav-list > .active > a:hover,
+  .nav-list > .active > a:focus,
+  .grid li a:hover img,
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus,
+  .gform_wrapper li.gfield_error input[type="text"]:focus,
+  .gform_wrapper li.gfield_error input[type="url"]:focus,
+  .gform_wrapper li.gfield_error input[type="email"]:focus,
+  .gform_wrapper li.gfield_error input[type="tel"]:focus,
+  .gform_wrapper li.gfield_error input[type="number"]:focus,
+  .gform_wrapper li.gfield_error input[type="password"]:focus,
+  .gform_wrapper li.gfield_error textarea:focus{
+    border-color: @_arg;
+  }
+  .navbar .nav > .active > a,
+  .navbar .nav > .active > a:hover,
+  .navbar .nav > .active > a:focus,
+  .nav-pills > .active > a,
+  .nav-pills > .active > a:hover,
+  .nav-pills > .active > a:focus,
+  .nav-tabs.nav-stacked > .active > a,
+  .nav-tabs.nav-stacked > .active > a:hover,
+  .nav-tabs.nav-stacked > .active > a:focus,
+  .nav-list > .active > a,
+  .nav-list > .active > a:hover,
+  .nav-list > .active > a:focus,
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus,
+  .dropdown-submenu:hover > a,
+  .dropdown-submenu:focus > a,
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus,
+  .progress .bar,
+  .progress-striped .bar,
+  .progress-info.progress-striped .bar, .progress-striped .bar-info,
+  nav[role="navigation"] .nav-pills-square li a:hover{
+    background-color:  @_arg;
+  }
+
+  .form-control:focus{
+    border-color: @_arg;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(red(@_arg),green(@_arg), blue(@_arg), 0.6);
+  }
+
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+    background-color: @_arg;
+    border-color: @_arg;
+  }
+
+}
+
+
+body, p, .gform_body .gfield input, .gform_body .gfield textarea, .gform_body .gfield select{
+  font-size: @pixelfont;
+  line-height: @line-height-base;
+}
+h1{
+  font-size: (@pixelfont * 3);
+  line-height: 1.2;
+}
+h2{
+  font-size: (@pixelfont * 1.5);
+  line-height: 1.2;
+}
+h3{
+  font-size: (@pixelfont * 1.17);
+  line-height: 1.2;
+}
+h4{
+  font-size: (@pixelfont * 1);
+  line-height: @line-height-base;
+}
+h5{
+  font-size: (@pixelfont * 0.83);
+  line-height: @line-height-base;
+}
+h6{
+  font-size: (@pixelfont * 0.75);
+  line-height: @line-height-base;
+}
+
+/*scrolltotop*/
+#topcontrol {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  border-radius: 3px;
+  color: #FFFFFF;
+  height: 48px;
+  line-height: 55px;
+  margin: 0 15px 15px 0;
+  text-align: center;
+  width: 48px;
+  z-index: 10000;
+}
+#scrolltotop:before {
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #FFFFFF;
+  border-image: none;
+  border-style: solid;
+  border-width: 10px;
+  content: "";
+  height: 0;
+  left: 28%;
+  position: absolute;
+  top: 17%;
+  width: 0;
+}
+
+#topcontrol:hover{
+  background-color: darken(@baseColor,10%);
+}
+
+/****************************END LESS CSS****************************/
+
+/****************************Overwrite CSS****************************/
+.element(@baseColor);
+
+.accent{
+  color: @baseColor !important;
+}
+
+.accent2{
+  color: #009246 !important;
+}
+
+.accent3{
+  color: #fff !important;
+}
+
+.btn {
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.btn-lg {
+  font-size: 15px;
+  padding: 15px 35px;
+}
+
+.btn-primary{
+  .btn;
+}
+
+.btn-custom{
+  .btn(#21285E);
+}
+
+.btn-custom2{
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  &:hover, &:active, &:focus {
+    background: #fff;
+    color: @basecolor;
+    border: 2px solid #fff;
+  }
+}
+
+/*font*/
+.font-38 {
+  font-size: 38px;
+}
+.font-28 {
+  font-size: 28px;
+}
+.font-26 {
+  font-size: 26px;
+}
+.font-18 {
+  font-size: 18px;
+}
+
+/****************************Custom CSS****************************/
+
+
+/**************************** Header ****************************/
+nav[role="navigation"] .nav > li {
+  > a {
+    color: #666;
+    font-size: 15px;
+    .caret {
+      border-bottom-color: #fff;
+      border-top-color: #fff;
+    }
+    &:hover, &:active, &:focus {
+      background: transparent;
+      color: @baseColor;
+      .caret {
+        border-bottom-color: @baseColor;
+        border-top-color: @baseColor;
+      }
+    }
+  }
+  &.active > a {
+    color: @baseColor;
+    .caret {
+      border-bottom-color: @baseColor;
+      border-top-color: @baseColor;
+    }
+  }
+}
+nav[role="navigation"] .nav .dropdown-menu > li {
+  &:hover > a, &:active > a, &:focus > a,
+  > a:hover, > a:active, > a:focus {
+    color: #fff;
+  }
+}
+
+/**************************** Footer ****************************/
+
+/**************************** Homepage ****************************/
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media  (max-width: 991px) {
+  nav[role="navigation"] {
+    width: 100%;
+  }
+  nav[role="navigation"] select {
+    display: block;
+  }
+  nav[role="navigation"] ul {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  nav[role="navigation"] select {
+    margin: 10px 0;
+  }
+  header .brand img {
+    max-width: 160px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<button onclick="mathRandom(2)">2 digit</button>
+<button onclick="mathRandom(3)">3 digit</button>
+<button onclick="mathRandom(6)">6 digit</button>
+
+<p id="demo"></p>
+
+<script>
+    function mathRandom(n) {
+        var r1 = Math.floor((Math.random() * 10));
+        var r2 = Math.floor((Math.random() * 10));
+        var r3 = Math.floor((Math.random() * 10));
+        var r4 = Math.floor((Math.random() * 10));
+        var r5 = Math.floor((Math.random() * 10));
+        var r6 = Math.floor((Math.random() * 10));
+        if(n == 2){
+            var x = r1+''+r2;
+            document.getElementById("demo").innerHTML = x;
+        }
+        if(n == 3){
+            var x = r1+''+r2+''+r3;
+            document.getElementById("demo").innerHTML = x;
+        }
+        if(n == 6){
+            var x = r1+''+r2+''+r3+''+r4+''+r5+''+r6;
+            document.getElementById("demo").innerHTML = x;
+        }
+    }
+</script>
+
+
+</body>
+</html>

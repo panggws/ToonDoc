@@ -1,0 +1,26 @@
+#hp-testimonial .testimonial {
+    min-height: 165px;
+	> .fa-quote-left {
+    display: none;
+	}
+	> div {
+    font-style: italic;
+    text-align: left;
+	}
+	> .text-right {
+    font-style: italic;
+		> strong {
+    	font-style: normal;
+		}
+	}
+}
+#hp-testimonial .carousel-indicators {
+    bottom: -50px;
+> li {
+    background: #dadada;
+    margin: 0 3px;
+	&.active {
+    background: @baseColor;
+	}
+    }
+}

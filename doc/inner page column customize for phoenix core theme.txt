@@ -1,0 +1,33 @@
+.row.content > article.col-md-9,
+.row.content > #toc.col-md-9{
+    left: 30%;
+    width: 70%;
+}
+.row.content > .col-md-3[role="complementary"] {
+    right: 70%;
+    width: 30%;
+}
+
+@media  (max-width: 991px) {
+	.row.content > article.col-md-9,
+.row.content > #toc.col-md-9 {
+    left: 33%;
+    width: 66%;
+}
+.row.content > .col-md-3[role="complementary"] {
+    right: 66%;
+    width: 33%;
+}
+}
+
+@media (max-width: 767px) {
+	.row.content > article.col-md-9,
+.row.content > #toc.col-md-9 {
+    left: 0;
+    width: 100%;
+}
+.row.content > .col-md-3[role="complementary"] {
+    right: 0;
+    width: 100%;
+}	
+}

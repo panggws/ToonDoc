@@ -1,0 +1,12 @@
+<script type="text/javascript">
+
+function listRan() {
+    return Math.floor(Math.random() * 3) + 1 ;
+}
+
+
+$(document).ready(function() {
+	var listNo = listRan();
+	$('#listings .random-list .row-condensed:nth-child('+ rowN  + ')').find('article:nth-child('+listNo + ')').addClass('active');
+});
+</script>

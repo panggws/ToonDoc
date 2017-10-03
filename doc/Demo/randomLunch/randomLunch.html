@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=TIS-620" />
+</head>
+<body>
+
+<button onclick="mathRandom()" style="font-size: 40px;">หิวข้าว</button>
+
+<p id="demo" style="font-size: 50px;"></p>
+
+<script>
+    function mathRandom() {
+
+        var restaurant = ['ใต้คอนโด', 'โนเนม', 'แคนทีน', 'ราดหน้า', 'หยิวกี่', 'ตาวาว', 'ข้าวหอม', 'เตี๋ยวซอยแท้งเถื่อน', 'เจ๊ทิพย์', 'สเต็ก', 'ส้มตำ', 'พิจิตร', 'Pinery'];
+
+        var random = restaurant[Math.floor(Math.random() * (restaurant.length))];
+
+        document.getElementById("demo").innerHTML = random;
+
+    }
+</script>
+
+
+</body>
+</html>

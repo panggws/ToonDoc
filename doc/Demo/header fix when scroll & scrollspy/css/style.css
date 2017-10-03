@@ -1,0 +1,44 @@
+.sticky{
+    position:fixed;
+    top:0;
+    font-size: 25px !important;
+    line-height: 25px !important;
+    color: #2E9FFF !important;
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 rgba(53, 58, 61, 0.05);
+    z-index: 99;
+}
+.sticky-subnav{
+    position:fixed;
+    /*top: 50px;*/
+}
+.menu{
+    color: #000;
+    font-size: 50px;
+    line-height: 50px;
+    width: 100%;
+    transition: top 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s, background 0.2s ease-in-out 0s;
+}
+.menu-padding{
+    padding-top: 170px;
+}
+body{
+    background-color: #72C6E2;
+}
+
+.subnav ul{
+    width: 100%;
+    background-color: #333;
+}
+#feature{
+    background-color: yellow;
+}
+#benefits{
+    background-color: red;
+}
+#community{
+    background-color: orange;
+}
+#press{
+    background-color: deepskyblue;
+}

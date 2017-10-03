@@ -1,0 +1,17 @@
+.carousel.slide.partners-carousel {
+	> .carousel-indicators {
+    bottom: -50px;
+    left: 0;
+    margin-left: 0;
+    text-align: left;
+    width: 100%;
+	> li {
+		background: #dadada;
+		height: 8px;
+		width: 8px;
+		&.active {
+    			background: @baseColor;
+		}
+	}
+}
+}

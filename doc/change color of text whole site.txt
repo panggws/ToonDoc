@@ -1,0 +1,8 @@
+(function($){
+    $("p").each(function () {
+        var color = $(this).css("color");
+        if (color == "rgb(0, 171, 143)") {
+            $(this).css("color", "#8fc93b");
+        }
+    });
+})(jQuery);

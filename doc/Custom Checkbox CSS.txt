@@ -1,0 +1,74 @@
+/************** HTML ******************/
+
+<div class="checkbox">
+    <span>Check box to proceed: </span> 
+    <label style="font-size: 1.3em"> 
+        <input value="1" id="00N3000000B9V9C" name="00N3000000B9V9C" type="checkbox" required>
+        <span class="cr"><i class="cr-icon fa fa-check"></i> </span>
+    </label>
+</div>
+
+
+/************ Custom checkbox in form **************/
+
+<style>
+
+.checkbox {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    display: flex!important;
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    padding: 0;
+}
+
+.checkbox label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.checkbox .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+.checkbox .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+.checkbox label input[type="checkbox"] {
+  transform: translateX(20px);
+  visibility: hidden;
+}
+.checkbox label input[type="checkbox"] + .cr > .cr-icon {
+    -webkit-transform: scale(3) rotateZ(-20deg);
+            transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon {
+    -webkit-transform: scale(1) rotateZ(0deg);
+            transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr {
+    opacity: .5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+</style>
